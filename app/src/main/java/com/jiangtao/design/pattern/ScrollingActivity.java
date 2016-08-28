@@ -1,45 +1,30 @@
 package com.jiangtao.design.pattern;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
+import com.jiangtao.design.pattern.builder.book.Builder;
+import com.jiangtao.design.pattern.builder.book.Director;
+import com.jiangtao.design.pattern.builder.book.MacBookBuilder;
 
+/**
+ * Class: ScrollingActivity <br>
+ * Description: 主页 <br>
+ * Creator: kevin <br>
+ * Date: 16/8/28 下午4:37 <br>
+ * Update: 16/8/28 下午4:37 <br>
+ */
 public class ScrollingActivity extends AppCompatActivity {
+
+    public static final String TAG = ScrollingActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_scrolling, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        Builder builder = new MacBookBuilder();
+        Director pcDirector = new Director(builder);
+        pcDirector.construct("英特尔主板","牛逼显示器");
+        Log.d(TAG, "onCreate: "+builder.create().toString());
     }
 }
