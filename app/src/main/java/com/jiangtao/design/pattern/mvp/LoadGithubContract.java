@@ -10,19 +10,26 @@ package com.jiangtao.design.pattern.mvp;
 
 public interface LoadGithubContract {
 
-  interface View extends BaseView<Presenter>{
+  interface View {
 
     void setAvatar(String url);
 
     void setUserName(String name);
+
+    void error();
   }
 
 
-  public interface Presenter extends BasePresenter{
+  public interface Presenter {
 
-    void onLoadGithubStart();
+    void loadGithubData(String userName);
 
-    void onLoadGithubComplete(Users topContributor);
+    interface DataStatus{
+
+      void error(Throwable varThrowable);
+
+      void success(Users varUsers);
+    }
   }
 
 }
