@@ -6,7 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.jiangtao.design.pattern.ScrollingActivity">
+    tools:context="com.jiangtao.design.pattern.ScrollingActivity"
+    >
 
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/view_navigation_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+  </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
