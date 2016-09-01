@@ -1,10 +1,11 @@
-package com.jiangtao.design.pattern;
+package com.jiangtao.design.pattern.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.jiangtao.design.pattern.R;
 import com.jiangtao.design.pattern.mvp.LoadGithubContract;
 import com.jiangtao.design.pattern.mvp.LoadGithubPresenter;
 

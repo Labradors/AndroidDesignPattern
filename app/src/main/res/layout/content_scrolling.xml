@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.jiangtao.design.pattern.ScrollingActivity"
+    tools:context="com.jiangtao.design.pattern.view.ScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
 
     <TextView

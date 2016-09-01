@@ -1,4 +1,4 @@
-package com.jiangtao.design.pattern;
+package com.jiangtao.design.pattern.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import com.jiangtao.design.pattern.R;
 import com.jiangtao.design.pattern.builder.book.Builder;
 import com.jiangtao.design.pattern.builder.book.Director;
 import com.jiangtao.design.pattern.builder.book.MacBookBuilder;
-import com.jiangtao.design.pattern.view.NavigationAdapter;
 import java.util.ArrayList;
 
 /**
